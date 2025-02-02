@@ -4,7 +4,7 @@ import { io } from 'socket.io-client';
 const SocketClient = () => {
   useEffect(() => {
     // Connect to the backend server
-    const socket = io('http://localhost:3000');
+    const socket = io('http://localhost:3001');
 
     // Listen for a 'connect' event
     socket.on('connect', () => {

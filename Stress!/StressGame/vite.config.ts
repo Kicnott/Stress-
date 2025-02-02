@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [react()],
     server: {
       proxy: {
-        '/api': {
+        '/api' : 'http://localhost:3000',
+        '/socket.io': {
           target: 'http://localhost:3000', // Proxy all /api requests to the Express server
           changeOrigin: true,
-          ws: true,  // WebSocket support
-        } 
+          ws: true,
+        }
       },
     },
 })
